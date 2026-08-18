@@ -3,7 +3,7 @@ from typing import Literal
 from langchain_core.runnables import RunnableConfig
 from langgraph.graph import START, END, StateGraph, MessagesState
 
-from nodes import list_tables,call_get_schema,get_schema_node ,generate_query,check_query, run_query_node
+from services.nodes import list_tables,call_get_schema,get_schema_node ,generate_query,check_query, run_query_node
 
 
 
@@ -22,7 +22,7 @@ builder.add_node(call_get_schema)
 builder.add_node("get_schema", get_schema_node)
 builder.add_node(generate_query)
 builder.add_node(check_query)
-builder.add_node( "run_query", run_query_node)
+builder.add_node("run_query", run_query_node)
 
 builder.add_edge(START, "list_tables")
 builder.add_edge("list_tables","call_get_schema")

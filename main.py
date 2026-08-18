@@ -1,4 +1,4 @@
-from graph import agent
+from services.graph import agent
 
 question = "имена всех покупателей?"
 

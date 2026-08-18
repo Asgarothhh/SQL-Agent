@@ -1,4 +1,3 @@
-
 generate_query_system_prompt = """
 You are an agent designed to interact with a SQL database.
 Given an input question, create a syntactically correct {dialect} query to run,

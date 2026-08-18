@@ -1,5 +1,5 @@
 from langchain_openai import ChatOpenAI
-from config import Config
+from services.config import Config
 
 config = Config()
 

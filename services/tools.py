@@ -1,5 +1,5 @@
 from langchain.tools import tool
-from config import Config
+from services.config import Config
 from sqlalchemy import create_engine, inspect, exc, text
 from sqlalchemy.orm import Session
 

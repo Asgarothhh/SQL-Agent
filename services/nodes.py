@@ -4,9 +4,9 @@ from langchain.messages import AIMessage
 from langgraph.graph import MessagesState
 from langgraph.prebuilt import ToolNode
 
-from prompt import check_query_system_prompt, generate_query_system_prompt
-from model import model
-from tools import tools
+from services.prompt import check_query_system_prompt, generate_query_system_prompt
+from services.model import model
+from services.tools import tools
 
 get_schema_tool = next(tool for tool in tools if tool.name == "sql_db_schema")
 get_schema_node = ToolNode([get_schema_tool], name = "get_scema")
